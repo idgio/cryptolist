@@ -24,20 +24,14 @@ export class AppComponent {
     });
   }
   ngOnInit() {
-        //load articles
-      //this.cryptoData.initArticles().subscribe(data => this.mArticles = data['articles']);
-    //load news sources
     this.cryptoData.initSources()
                    .subscribe(data=> {
-                     this.mSources = data.data;
+                     this.mSources = data;
                      //console.log(data);
                    });  
     
     }
 
 
-  searchArticles(source){
-    console.log("selected source is: "+source);
-    //this.cryptoData.getArticlesByID(source).subscribe(data => this.mArticles = data['articles']);
-  }
+  
 }
